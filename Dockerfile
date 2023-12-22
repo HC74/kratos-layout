@@ -22,3 +22,5 @@ EXPOSE 9000
 VOLUME /data/conf
 
 CMD ["./server", "-conf", "/data/conf"]
+
+# TODO 校验是否是我认知的样子
