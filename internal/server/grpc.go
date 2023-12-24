@@ -1,13 +1,13 @@
 package server
 
 import (
-	v1 "github.com/go-kratos/kratos-layout/api/helloworld/v1"
-	"github.com/go-kratos/kratos-layout/internal/conf"
-	"github.com/go-kratos/kratos-layout/internal/service"
+	v1 "github.com/HC74/kratos-layout/api/helloworld/v1"
+	"github.com/HC74/kratos-layout/internal/conf"
+	"github.com/HC74/kratos-layout/internal/service"
+	"github.com/HC74/kratos/v2/middleware/recovery"
 
-	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/middleware/recovery"
-	"github.com/go-kratos/kratos/v2/transport/grpc"
+	"github.com/HC74/kratos/v2/log"
+	"github.com/HC74/kratos/v2/transport/grpc"
 )
 
 // NewGRPCServer new a gRPC server.

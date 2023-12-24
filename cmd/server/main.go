@@ -2,17 +2,16 @@ package main
 
 import (
 	"flag"
+	"github.com/HC74/kratos/v2"
+	"github.com/HC74/kratos/v2/config"
+	"github.com/HC74/kratos/v2/config/file"
+	"github.com/HC74/kratos/v2/log"
+	"github.com/HC74/kratos/v2/middleware/tracing"
+	"github.com/HC74/kratos/v2/transport/grpc"
+	"github.com/HC74/kratos/v2/transport/http"
 	"os"
 
-	"github.com/go-kratos/kratos-layout/internal/conf"
-
-	"github.com/go-kratos/kratos/v2"
-	"github.com/go-kratos/kratos/v2/config"
-	"github.com/go-kratos/kratos/v2/config/file"
-	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/middleware/tracing"
-	"github.com/go-kratos/kratos/v2/transport/grpc"
-	"github.com/go-kratos/kratos/v2/transport/http"
+	"github.com/HC74/kratos-layout/internal/conf"
 
 	_ "go.uber.org/automaxprocs"
 )
@@ -30,7 +29,8 @@ var (
 )
 
 func init() {
-	flag.StringVar(&flagconf, "conf", "../../configs", "config path, eg: -conf config.yaml")
+	//flag.StringVar(&flagconf, "conf", "../../configs", "config path, eg: -conf config.yaml")
+	flag.StringVar(&flagconf, "conf", "./configs", "config path, eg: -conf config.yaml")
 }
 
 func newApp(logger log.Logger, gs *grpc.Server, hs *http.Server) *kratos.App {
