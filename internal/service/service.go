@@ -1,6 +1,19 @@
 package service
 
-import "github.com/google/wire"
+import (
+	v1 "kratos-layout/api/v1"
+	super "kratos-layout/config"
+	"kratos-layout/internal/logic"
+)
 
-// ProviderSet is service providers.
-var ProviderSet = wire.NewSet(NewGreeterService)
+// Service is a greeter service.
+type Service struct {
+	v1.UnimplementedServiceServer
+	logic *logic.Logic
+}
+
+func New(conf *super.Config) *Service {
+	return &Service{
+		logic: logic.NewLogic(conf),
+	}
+}

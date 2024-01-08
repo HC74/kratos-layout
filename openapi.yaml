@@ -3,17 +3,16 @@
 
 openapi: 3.0.3
 info:
-    title: Greeter API
+    title: Service API
     description: The greeting service definition.
     version: 0.0.1
 paths:
     /helloworld/{name}:
         get:
             tags:
-                - Greeter
-                - subgroup
+                - Service
             description: Sends a greeting
-            operationId: Greeter_SayHello
+            operationId: Service_SayHello
             parameters:
                 - name: name
                   in: path
@@ -26,14 +25,14 @@ paths:
                     content:
                         application/json:
                             schema:
-                                $ref: '#/components/schemas/helloworld.v1.HelloReply'
+                                $ref: '#/components/schemas/v1.HelloReplyTest'
 components:
     schemas:
-        helloworld.v1.HelloReply:
+        v1.HelloReplyTest:
             type: object
             properties:
                 message:
                     type: string
             description: The response message containing the greetings
 tags:
-    - name: Greeter
+    - name: Service
