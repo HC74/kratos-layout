@@ -7,8 +7,7 @@ import (
 
 // SayHello implements SayHello
 func (l *Logic) SayHello(ctx kratosx.Context, in *v1.HelloRequest) (*v1.HelloReplyTest, error) {
-	//ctx.Logger()
-	//ctx.Logger().Info("test info logs")
+	// TODO Logic业务逻辑
 	return &v1.HelloReplyTest{
 		Message: l.conf.Msg,
 	}, nil

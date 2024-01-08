@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/HC74/kratosx"
 	"github.com/HC74/kratosx/config"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/transport/grpc"
@@ -23,6 +24,7 @@ func main() {
 
 func RegisterServer(c config.Config, hs *http.Server, gs *grpc.Server) {
 	conf := &super.Config{}
+	// config/config.yaml -> customize
 	if err := c.Value("customize").Scan(conf); err != nil {
 		panic("business config format error:" + err.Error())
 	}
