@@ -11,6 +11,7 @@ log:
   level: 0 #日志输出等级
   output:
     - file # file:输出到文件
+    - stdout
   file: #output存在file时此配置才可生效
     path: ./tmp/runtime/output.log #日志存放地址
     maxSize: 1 #日志文件最大容量,单位m
@@ -19,7 +20,7 @@ log:
     compress: false #是否进行压缩归档
 database:
   system: #数据库实例名称,如有多个数据库可新增
-    enable: true #是否启用数据库
+    enable: false #是否启用数据库
     drive: mysql #数据库类型
     dsn: root:12345678@tcp(localhost:3306)/test?charset=utf8mb4&parseTime=True&loc=Local #连接dsn
     maxLifetime: 2h #最大生存时间
