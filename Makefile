@@ -44,7 +44,7 @@ api:
  	       --go-grpc_out=paths=source_relative:./api/v1 \
  	       --validate_out=paths=source_relative,lang=go:./api/v1 \
  	       --go-errors_out=paths=source_relative:./api/v1 \
-	       --openapi_out=fq_schema_naming=true,default_response=false:. \
+	       --openapi_out=fq_schema_naming=true,default_response=false:./api \
 	      ./api/*.proto
 
 .PHONY: build
