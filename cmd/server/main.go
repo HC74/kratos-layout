@@ -14,6 +14,7 @@ import (
 
 func main() {
 	app := kratosx.New(
+		//kratosx.ConfigPath("config/config.yaml"), 默认值为config/config.yaml 可替换为自己的配置文件目录
 		kratosx.RegisterServer(RegisterServer),
 	)
 
