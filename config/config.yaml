@@ -28,5 +28,12 @@ database:
     maxIdleConn: 11 #最大空闲数量
     logLevel: 1 #日志等级
     slowThreshold: 2s #慢sql阈值
+redis:
+  catch: #redis实例名称,如有多个redis可新增
+    enable: false #是否启用redis
+    host: 127.0.0.1:6379 #redis地址
+    db: 0 #指定db
+#    username: #用户名
+#    password: #密码
 customize:
   Msg: "hello world"
